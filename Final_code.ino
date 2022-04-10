@@ -14,13 +14,13 @@
 #define led D7
 
 // WiFi parameters
-#define WLAN_SSID       "iPhone 12 pro"
-#define WLAN_PASS       "kjm123456789"
+#define WLAN_SSID       "<WiFI NAME>"
+#define WLAN_PASS       "<WiFi PASSWORD"
 // Adafruit IO
 #define AIO_SERVER      "io.adafruit.com"
 #define AIO_SERVERPORT  1883
-#define AIO_USERNAME    "KJ_mistry09"
-#define AIO_KEY         "aio_oczA71zVQ9n1MxGheEjzAe1ErWNj"
+#define AIO_USERNAME    "<ENTER ADAFRUIT USERNAME>"
+#define AIO_KEY         "<ENTER ADAFRUIT IO KEY>"
 WiFiClient client;
 
 // Setup the MQTT client class by passing in the WiFi client and MQTT server and login details.
@@ -240,8 +240,8 @@ void loop()
 
     delay(2000);
 
-    if (!vibration.publish(vbr_data))
-    { //Publish to Adafruit
+    if (!vibration.publish(vbr_data)) //Publish to Adafruit
+    {
         Serial.println(F("Failed"));
     }
     else
